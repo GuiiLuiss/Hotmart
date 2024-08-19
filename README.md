@@ -1,7 +1,6 @@
 # Hotmart | Voice-Over Automático para Vídeos
-**Avaliação - Cientista de Dados (AI Labs)**
 
-Este repositório contém a minha solução para o desafio proposto pela Hotmart como parte do processo de avaliação para a vaga de Cientista de Dados. Neste projeto, desenvolvi um pipeline completo para extração de áudio de um vídeo, transcrição, tradução, síntese de voz em inglês e sincronização de áudio com vídeo, utilizando tecnologias open-source.
+Este repositório contém a minha solução para o desafio proposto pela Hotmart. Neste projeto, desenvolvi um pipeline completo para extração de áudio de um vídeo, transcrição, tradução, síntese de voz em inglês e sincronização de áudio com vídeo, utilizando tecnologias open-source.
 
 ## 🎯 O Desafio
 
