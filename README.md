@@ -1,4 +1,4 @@
-# Hotmart - Voice-over Automático para Vídeos
+# Hotmart | Voice-over Automático para Vídeos
 Avaliação - Cientista de Dados (AI Labs)
 
 Este projeto demonstra um pipeline completo para extração de áudio de um vídeo, transcrição, tradução, síntese de voz em inglês e sincronização de áudio com vídeo, utilizando tecnologias de código aberto. 
