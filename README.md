@@ -1,15 +1,26 @@
-# Hotmart | Voice-over Automático para Vídeos
-Avaliação - Cientista de Dados (AI Labs)
+# Hotmart | Voice-Over Automático para Vídeos
+**Avaliação - Cientista de Dados (AI Labs)**
 
-Este projeto demonstra um pipeline completo para extração de áudio de um vídeo, transcrição, tradução, síntese de voz em inglês e sincronização de áudio com vídeo, utilizando tecnologias de código aberto. 
+Este repositório contém a minha solução para o desafio proposto pela Hotmart como parte do processo de avaliação para a vaga de Cientista de Dados. Neste projeto, desenvolvi um pipeline completo para extração de áudio de um vídeo, transcrição, tradução, síntese de voz em inglês e sincronização de áudio com vídeo, utilizando tecnologias open-source.
 
-## Estrutura do Projeto
+## 🎯 O Desafio
+
+O objetivo deste projeto é processar um vídeo de um curso em Português (Brasil), transcrever o conteúdo, traduzir para o inglês e gerar um vídeo de exemplo com voice-over em inglês. Para demonstrar o conceito, processei um sample de 3 a 5 minutos do vídeo original.
+
+## Pontos Considerados:
+
+- **Uso de Ferramentas Open-Source**
+- **Qualidade da Transcrição e Tradução**
+- **Síntese de Voz**: A síntese de voz em inglês foi realizada utilizando uma voz padrão.
+- **Sincronização do Áudio com o Vídeo**: A sincronização perfeita dos lábios com o áudio (lip-sync) não foi abordada devido ao escopo do projeto, mas o áudio foi sincronizado de forma funcional para o conceito de voice-over.
+
+## 📁 Estrutura do Projeto
 
 ```plaintext
 Hotmart/
 ├── data/
 │   ├── input/
-│   │   └── case_video_hotmart.mp4  # (Insira o vídeo aqui)
+│   │   └── case_video_hotmart.mp4  # (Insira o vídeo a ser processado aqui)
 │   └── output/                     # (Os resultados serão salvos aqui)
 ├── src/
 │   ├── audio_processing.py
@@ -20,52 +31,56 @@ Hotmart/
 └── README.md
 ```
 
-Para instalar as dependências necessárias, execute:
+## 🚀 Como Executar o Projeto
+
+### 1. Instalação das Dependências
+
+Para reproduzir este projeto, instale as dependências necessárias com o seguinte comando:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Como Executar
+### 2. Preparação dos Dados
 
-1. **Preparação dos dados**: Coloque o vídeo a ser processado dentro da pasta `data/input` e renomeie-o para `case_video_hotmart.mp4`.
+Coloque o vídeo a ser processado na pasta `data/input` e renomeie-o para `case_video_hotmart.mp4`.
 
-2. **Execução do pipeline**: Após a configuração dos dados, basta rodar o arquivo `main.py` localizado na pasta `src`:
+### 3. Execução do Pipeline
+
+Com os dados prontos, execute o pipeline rodando o script `main.py` localizado na pasta `src`:
 
 ```bash
 python src/main.py
 ```
 
-3. **Resultados**: Os arquivos gerados pelo pipeline estarão na pasta `data/output`:
+## ✅ Resultados
 
-    - `case_video_audio_5min.wav`: Áudio extraído do vídeo.
-    - `case_video_audio_normalized.wav`: Áudio normalizado.
-    - `transcription_ptbr.txt`: Transcrição do áudio em português.
-    - `transcription_en.txt`: Tradução da transcrição para o inglês.
-    - `transcription_en_audio.mp3`: Áudio em inglês gerado a partir da tradução.
-    - `output_video_with_english_audio.mp4`: Vídeo final com o áudio em inglês sincronizado.
+Os resultados gerados pelo pipeline serão armazenados na pasta `data/output`. Os principais arquivos de saída são:
 
-## Detalhes Técnicos
+- **`case_video_audio_5min.wav`**: Áudio extraído do vídeo.
+- **`case_video_audio_normalized.wav`**: Áudio normalizado.
+- **`transcription_ptbr.txt`**: Transcrição do áudio em português.
+- **`transcription_en.txt`**: Tradução da transcrição para o inglês.
+- **`transcription_en_audio.mp3`**: Áudio em inglês gerado a partir da tradução.
+- **`output_video_with_english_audio.mp4`**: Vídeo final com o áudio em inglês sincronizado.
 
-O pipeline completo envolve as seguintes etapas:
+## 🔍 Detalhes Técnicos
+
+O pipeline desenvolvido consiste nas seguintes etapas:
 
 1. **Extração e Normalização de Áudio**:
-   - Utilizamos `moviepy` para extrair o áudio do vídeo original e `pydub` para normalizar o volume do áudio extraído.
+   - Utilizei `moviepy` para extrair o áudio do vídeo e `pydub` para normalizar o volume.
 
 2. **Transcrição e Tradução**:
-   - A transcrição do áudio em português é realizada utilizando o modelo `Whisper` da OpenAI.
-   - A tradução do texto transcrito é feita com a biblioteca `translate`.
+   - A transcrição do áudio em português foi realizada com o modelo `Whisper` da OpenAI.
+   - A tradução para o inglês foi feita com a biblioteca `translate`.
 
 3. **Síntese de Voz**:
-   - A síntese de voz em inglês é feita utilizando a biblioteca `gTTS` (Google Text-to-Speech).
+   - A síntese de voz em inglês foi realizada com `gTTS` (Google Text-to-Speech).
 
 4. **Sincronização de Áudio com Vídeo**:
-   - A sincronização do áudio gerado com o vídeo original é realizada utilizando `moviepy`.
+   - O áudio gerado foi sincronizado com o vídeo original utilizando `moviepy`.
 
-## Logs
+## 📜 Logs de Execução
 
-Durante a execução, os logs do processo serão gerados no arquivo `data/output/project_log.log`. Esse arquivo contém informações detalhadas sobre cada etapa do pipeline.
-
-## Considerações Finais
-
-Este projeto é um protótipo focado em mostrar as capacidades de manipulação de mídia e processamento de linguagem natural. A sincronização perfeita dos lábios com a fala (lip-sync) não foi abordada neste protótipo devido às restrições de tempo e complexidade.
+Durante a execução, os logs detalhados do processo foram salvos no arquivo `data/output/project_log.log`. Este arquivo documenta cada etapa do pipeline, facilitando a análise e depuração.
