@@ -1,0 +1,16 @@
+2024-08-18 22:36:33,051 - INFO - Iniciando o pipeline de processamento de áudio e vídeo.
+2024-08-18 22:36:33,051 - INFO - Iniciando extração de áudio do vídeo: ../Hotmart/data/input/case_video_hotmart.mp4
+2024-08-18 22:36:34,196 - INFO - Áudio extraído com sucesso e salvo em data/output/case_video_audio_5min.wav
+2024-08-18 22:36:34,196 - INFO - Iniciando normalização do áudio: data/output/case_video_audio_5min.wav
+2024-08-18 22:36:34,345 - INFO - Áudio normalizado salvo em data/output/case_video_audio_normalized.wav
+2024-08-18 22:36:34,345 - INFO - Iniciando transcrição do áudio: data/output/case_video_audio_normalized.wav
+2024-08-18 22:45:26,920 - INFO - Transcrição concluída.
+2024-08-18 22:45:26,921 - INFO - Transcrição salva em data/output/transcription_ptbr.txt
+2024-08-18 22:45:26,922 - INFO - Iniciando tradução do texto.
+2024-08-18 22:45:45,278 - INFO - Tradução concluída.
+2024-08-18 22:45:45,278 - INFO - Tradução salva em data/output/transcription_en.txt
+2024-08-18 22:45:45,278 - INFO - Iniciando síntese de voz em inglês.
+2024-08-18 22:45:59,008 - INFO - Áudio em inglês gerado e salvo em data/output/transcription_en_audio.mp3
+2024-08-18 22:45:59,008 - INFO - Iniciando sincronização do áudio data/output/transcription_en_audio.mp3 com o vídeo ../Hotmart/data/input/case_video_hotmart.mp4
+2024-08-18 22:45:59,306 - INFO - Iniciando renderização do vídeo final.
+2024-08-18 22:46:15,291 - INFO - Vídeo gerado e salvo em data/output/output_video_with_english_audio.mp4
